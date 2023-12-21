@@ -50,11 +50,11 @@ function Navbar() {
         </div>
         <Cart showCart={showCart} toggleCart={toggleCart} />
         <div className="navbar-container">
-          <a href="/Ecommerce-shop"><img src={furnitureLogo} className="furniture-logo" alt="logo" /></a>
+          <a href="/Ecommerce-shop/"><img src={furnitureLogo} className="furniture-logo" alt="logo" /></a>
           <div className="links-container">
               <ul className="links">
-                  <li className="link-item"><a href="/categories/All">CATEGORIES</a></li>
-                  <li className="link-item"><a href={`/products/${randomProduct()}`}>PRODUCT PAGE</a></li>
+                  <li className="link-item"><a href="/Ecommerce-shop/categories/All">CATEGORIES</a></li>
+                  <li className="link-item"><a href={`/Ecommerce-shop/products/${randomProduct()}`}>PRODUCT PAGE</a></li>
                   <li className="cart-amount" onClick={() => toggleCart()}><FontAwesomeIcon icon={faCartShopping} /> {cartAmount === 0 ? "" : <span className="item-amount">{cartAmount}</span>}</li>
                   <li className="link-bars" onClick={() => toggleLink()}><FontAwesomeIcon icon={faBars} size="2xl"/></li>
               </ul>
