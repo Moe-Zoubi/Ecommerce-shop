@@ -66,7 +66,7 @@ function App() {
           <Navbar />
           <BrowserRouter>
             <Routes>
-              <Route index element={<HomePage />} />
+              <Route index path='/' element={<HomePage />} />
               <Route path='/home' element={<HomePage />} />
               <Route path='/categories/:type' element={<Categories />} />
               <Route path='/products/:id' element={<Products />} />
