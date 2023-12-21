@@ -60,7 +60,7 @@ function Navbar() {
         </div>
         <Cart showCart={showCart} toggleCart={toggleCart} />
         <div className="navbar-container">
-          <img src={furnitureLogo} className="furniture-logo" alt="logo" onClick={navigate("/home")}/>
+          <img src={furnitureLogo} className="furniture-logo" alt="logo" onClick={() => navigate("/home")}/>
           <div className="links-container">
               <ul className="links">
                   <li className="link-item" onClick={() => navigateToCategories()}>CATEGORIES</li>
