@@ -66,7 +66,7 @@ function App() {
           <Navbar />
           <BrowserRouter>
             <Routes>
-              <Route index path='/' element={<HomePage />} />
+              <Route index path='/Ecommerce-shop' element={<HomePage />} />
               <Route path='categories/:type' element={<Categories />} />
               <Route path='products/:id' element={<Products />} />
             </Routes>

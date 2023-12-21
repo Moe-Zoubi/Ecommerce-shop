@@ -50,7 +50,7 @@ function Navbar() {
         </div>
         <Cart showCart={showCart} toggleCart={toggleCart} />
         <div className="navbar-container">
-          <a href="/home"><img src={furnitureLogo} className="furniture-logo" alt="logo" /></a>
+          <a href="/Ecommerce-shop"><img src={furnitureLogo} className="furniture-logo" alt="logo" /></a>
           <div className="links-container">
               <ul className="links">
                   <li className="link-item"><a href="/categories/All">CATEGORIES</a></li>
