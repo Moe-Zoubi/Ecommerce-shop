@@ -67,9 +67,8 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route index path='/' element={<HomePage />} />
-              <Route path='/home' element={<HomePage />} />
-              <Route path='/categories/:type' element={<Categories />} />
-              <Route path='/products/:id' element={<Products />} />
+              <Route path='categories/:type' element={<Categories />} />
+              <Route path='products/:id' element={<Products />} />
             </Routes>
           </BrowserRouter>
         </div>
