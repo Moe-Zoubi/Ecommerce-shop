@@ -63,8 +63,9 @@ function App() {
     <CartContext.Provider value={ {cartItems, setCartItems, addToCart, editCart, deleteFromCart} }>
       <div className="App">
         <div className='wrap-container'>
-          <Navbar />
+          
           <BrowserRouter>
+            <Navbar />
             <Routes>
               <Route index path='/' element={<HomePage />} />
               <Route path='/home' element={<HomePage />} />
