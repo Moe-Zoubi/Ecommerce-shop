@@ -3,11 +3,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faCartShopping, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../pages/Products";
 import { useContext, useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Cart from "./Cart";
 
 function Navbar() {
 
   const  {cartItems}  = useContext(CartContext);
+  const navigate = useNavigate();
 
   const totalAmount = () =>{
     if(cartItems.length > 0){
@@ -44,8 +46,8 @@ function Navbar() {
         <div className={showLinks ? "show-mobile-nav" : "hide-mobile-nav"}>
           <p className="close-nav" onClick={() => toggleLink()} ><FontAwesomeIcon icon={faXmark}/></p>
           <div className="mobile-links">
-            <p onClick={() => toggleLink()}><a href="/categories/All">Categories</a></p>
-            <p onClick={() => toggleLink()}><a href={`/products/${randomProduct()}`}>Product Page</a></p>
+            <p onClick={() => {toggleLink(), navigate("/categories/All")}}>Categories</p>
+            <p onClick={() => {toggleLink(), navigate(`/products/${randomProduct()}`)}}>Product Page</p>
           </div>
         </div>
         <Cart showCart={showCart} toggleCart={toggleCart} />
@@ -54,7 +56,7 @@ function Navbar() {
           <div className="links-container">
               <ul className="links">
                   <li className="link-item"><a href="/categories/All">CATEGORIES</a></li>
-                  <li className="link-item"><a href={`/products/${randomProduct()}`}>PRODUCT PAGE</a></li>
+                  <li className="link-item" onClick={() => navigate(`/products/${randomProduct()}`)}>PRODUCT PAGE</li>
                   <li className="cart-amount" onClick={() => toggleCart()}><FontAwesomeIcon icon={faCartShopping} /> {cartAmount === 0 ? "" : <span className="item-amount">{cartAmount}</span>}</li>
                   <li className="link-bars" onClick={() => toggleLink()}><FontAwesomeIcon icon={faBars} size="2xl"/></li>
               </ul>
