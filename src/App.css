@@ -437,6 +437,7 @@ ul{
 .img-gallery img{
   height: 200px;
   width: 200px;
+  transition: scale 0.5s ease;
 }
 
 .img-gallery img:nth-child(2) {
