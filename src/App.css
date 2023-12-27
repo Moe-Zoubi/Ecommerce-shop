@@ -122,7 +122,6 @@ html{
     gap: 0;
   }
   .spec{
-    text-align: center;
     border-radius: 15px;
     background-color: #e5e5e5;
   }
@@ -586,6 +585,7 @@ ul{
 .spec{
   width: 30%;
   background-color: #e5e5e5;
+  text-align: center;
 }
 
 .spec-title{
