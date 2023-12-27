@@ -61,14 +61,14 @@ function Cart(props) {
             )
           })}
           </div>
-          <div className="checkout">
+        </div>
+        <div className="checkout">
             <p className="checkout-title">Subtotal</p>
             <div className="checkout-total">
               <p className="total-amount">{currencyFormatter.format(totalAmount(cartItems))}</p>
               <button>Go to checkout</button>
             </div>
           </div>
-        </div>
       </div>
     );
   }
