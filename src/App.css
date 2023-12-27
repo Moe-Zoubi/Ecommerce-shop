@@ -7,6 +7,45 @@ html{
   margin: 0 15%;
 }
 
+@media screen and (max-width:450px){
+  .wrap-container{
+    margin: 0 5% !important;
+  }
+
+  /*furniture display*/
+  .flex-container{
+    flex-direction: column;
+  }
+  .house-items{
+    width: 100% !important;
+    height: 20vh !important;
+  }
+  .equipment-items{
+    flex-direction: row !important;
+    width: 100% !important;
+    height: 20vh !important;
+  }
+  .kitchen, .electronics{
+    width: 50% !important;
+    height: auto !important;
+  }
+  
+  /* product page */
+  .specifications{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .spec{
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /*footer*/
+  .footer-links, .footer{
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width:800px) {
   .wrap-container{
     margin: 0 10%;
@@ -30,13 +69,20 @@ html{
   .product-container{
     margin:4rem auto !important;    
   }
-  .specifications{
-    margin-top: 37rem !important;
-  }
   .spec{
-    padding: 5px 1.5rem !important;
-    width: 20% !important;
     background-color: #e5e5e5;
+  }
+
+  /*banner*/
+  .banner{
+    flex-direction: column;
+  }
+  .banner-item{
+    width: 100% !important;
+  }
+  .banner-text{
+    width: 80% !important;
+    margin: 1rem auto !important;
   }
 }
 
@@ -51,14 +97,9 @@ html{
   .product-container{
     gap: 0;
   }
-  .specifications{
-    margin-top: 37rem !important;
-  }
   .spec{
     text-align: center;
     border-radius: 15px;
-    padding: 5px 1.5rem !important;
-    width: 25% !important;
     background-color: #e5e5e5;
   }
 }
@@ -247,7 +288,7 @@ ul{
 .product-container{
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   align-items: flex-start;
 }
@@ -256,8 +297,8 @@ ul{
   border: 1px solid lightgray;
   margin: 0 auto;
   padding: 10px;
-  width: 300px;
-  height: 400px;
+  width: auto;
+  height: auto;
   transition: border 0.1s linear;
 }
 
@@ -289,7 +330,7 @@ ul{
 
 .banner-item{
   width: 50%;
-  height: 400px;
+  height: auto;
 }
 
 .banner-text{
@@ -392,13 +433,11 @@ ul{
 
 .current-product{
   display: flex;
-  height: 900px;
+  height: auto;
 }
 
-
-
 .display-img img{
-  height: 600px;
+  height: auto;
   width: 70%;
   margin: 0 15%;
 }
@@ -411,14 +450,10 @@ ul{
 }
 
 .img-gallery img{
-  height: 200px;
-  width: 200px;
+  width: 25%;
   transition: scale 0.5s ease;
 }
 
-.img-gallery img:nth-child(2) {
-  height: 250px;
-}
 
 .img-gallery:has(img:hover) > img:not(:hover){
   scale: .8;
@@ -427,7 +462,6 @@ ul{
 
 .product-info{
   background-color: #e5e5e5;
-  height: 600px;
   margin: auto;
 }
 
@@ -522,12 +556,11 @@ ul{
 .specifications{
   display: flex;
   justify-content: space-between;
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 .spec{
-  padding: 10px 2rem;
-  width: 27%;
+  width: 30%;
   background-color: #e5e5e5;
 }
 
@@ -682,11 +715,11 @@ ul{
   background-color: black;
   color: white;
   text-align: center;
-  height: 300px;
+  height: auto;
 }
 
 .footer-container{
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -713,10 +746,9 @@ ul{
   font-weight: 700;
 }
 
-.contact-container{
-  margin-top: 40px ;
-}
+
 
 .contact-container p{
   margin-top: 2rem ;
+  padding-bottom: 1rem;
 }
