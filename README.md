@@ -5,8 +5,8 @@ This brand prioritizes the user experience, making it simple for customers to fi
 Live Demo: [E-commerce Website](https://65b1868747b8fa52c113b9a2--glittering-sable-c91beb.netlify.app/home)
 
 ### Built With:
->>React JS
->>Vanilla CSs
+* React JS
+* Vanilla CSS
 
 ### Screenshots of Homepage:
 ![E-commerce Page](./src/images/readme/ecommerce-ss.png)
